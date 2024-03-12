@@ -25,7 +25,9 @@ const LogIn = () => {
           { withCredentials: true },
         )
         .then((res) => {
-          mutate(res.data, false); //optimistic ui
+          // mutate(res.data, false); //optimistic ui
+
+          mutate();
         })
         .catch((err) => {
           console.log(err);
